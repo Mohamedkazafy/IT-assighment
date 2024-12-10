@@ -1,49 +1,50 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import { BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router-dom'
-import {IntroPage, Weather, RealNews, Quotes,FakeNews } from './pages/index.js'
-import FakeNewsCard from './pages/FakeNewsCard.jsx'
-import RealNewsCard from './RealNewsCard.jsx'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router-dom';
+import App from './App.jsx';
+import { IntroPage, Weather, RealNews, Quotes, FakeNews } from './pages/index.js';
+import FakeNewsCard from './pages/FakeNewsCard.jsx';
+import RealNewsCard from './pages/RealNewsCard.jsx';
+
+// Define the router
 const router = createBrowserRouter([
   {
-    path:'/',
-    element:<App/>,
-    children:[
+    path: '/',
+    element: <App />, // Parent route
+    children: [
       {
-        path:'/',
-        element:<IntroPage/>
+        path: '/', // Default child route
+        element: <IntroPage />,
       },
       {
-        path:"/weather",
-        element:<Weather/>
+        path: '/weather',
+        element: <Weather />,
       },
       {
-        path:"/real",
-        element:<RealNews/>
+        path: '/real',
+        element: <RealNews />,
       },
       {
-        path:"/real/:{id}",
-        element:<RealNewsCard/>
+        path: '/real/:id', // Correct syntax for dynamic route
+        element: <RealNewsCard />,
       },
       {
-        path:"/fake",
-        element:<FakeNews/>
+        path: '/fake',
+        element: <FakeNews />,
       },
       {
-        path:"/fake/:{id}",
-        element:<FakeNewsCard/>
+        path: '/fake/:id', // Correct syntax for dynamic route
+        element: <FakeNewsCard />,
       },
       {
-        path:"/quotes",
-        element:<Quotes/>
+        path: '/quotes',
+        element: <Quotes />,
       },
-    ]
-  }
-])
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <RouterProvider router={router}>
-    <App />
-  </RouterProvider>,
+    ],
+  },
+]);
 
-)
+// Render the application
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <RouterProvider router={router} />
+);
