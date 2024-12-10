@@ -1,6 +1,9 @@
 const FakeNews = () => {
+  
   return (
-    <div>FakeNews</div>
+    <div>
+
+    </div>
   )
 }
 
