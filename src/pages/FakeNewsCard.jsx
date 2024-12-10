@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
 const NewsDetail = () => {
-  const { id } = useParams(); // Get the `id` from the URL
-  const navigate = useNavigate(); // To navigate back or to a 404 page
+  const { id } = useParams();
+  const navigate = useNavigate(); 
   const [newsItem, setNewsItem] = useState(null);
   const [error, setError] = useState(null);
 

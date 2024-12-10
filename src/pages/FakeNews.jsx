@@ -6,7 +6,7 @@ const FakeNews = () => {
   const [news, setNews] = useState([]);
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/api/news`) // Update with your actual API URL
+    fetch(`http://127.0.0.1:8000/api/news`)
       .then(response => response.json())
       .then(data => {
         if (data.data && Array.isArray(data.data)) {

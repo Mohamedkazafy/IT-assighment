@@ -25,7 +25,7 @@ const router = createBrowserRouter([
         element: <RealNews />,
       },
       {
-        path: '/real/:id', // Correct syntax for dynamic route
+        path: '/real/:id',
         element: <RealNewsCard />,
       },
       {
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
         element: <FakeNews />,
       },
       {
-        path: '/fake/:id', // Correct syntax for dynamic route
+        path: '/fake/:id',
         element: <FakeNewsCard />,
       },
       {
@@ -44,7 +44,6 @@ const router = createBrowserRouter([
   },
 ]);
 
-// Render the application
 ReactDOM.createRoot(document.getElementById('root')).render(
   <RouterProvider router={router} />
 );
