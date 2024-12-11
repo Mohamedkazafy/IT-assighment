@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
-import { IntroPage, Weather, RealNews, Quotes, FakeNews } from './pages/index.js';
-import FakeNewsCard from './pages/FakeNewsCard.jsx';
-import RealNewsCard from './pages/RealNewsCard.jsx';
+import { IntroPage, Weather, RealNews, Quotes, FakeNews,FakeNewsCard } from './pages/index.js';
+
 
 // Define the router
 const router = createBrowserRouter([
@@ -23,10 +22,6 @@ const router = createBrowserRouter([
       {
         path: '/real',
         element: <RealNews />,
-      },
-      {
-        path: '/real/:id',
-        element: <RealNewsCard />,
       },
       {
         path: '/fake',

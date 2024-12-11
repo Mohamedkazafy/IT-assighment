@@ -37,7 +37,7 @@ const FakeNews = () => {
                   <p className="card-text">{item.content.substring(0, 100)}...</p>
                 </div>
                 <div className="card-footer">
-                  <Link to={`/news/${item.id}`} className="btn btn-primary">
+                  <Link to={`/fake/${item.id}`} className="btn btn-primary">
                     View Details
                   </Link>
                 </div>
